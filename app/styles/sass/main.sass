@@ -1,0 +1,283 @@
+@import config
+
+
+
+
+// del
+@media screen and (max-width: 1000px)
+  $gutter: 2px
+  $half_gutter: 1px
+// end del
+body
+  background: linear-gradient(to bottom, #fff, #fff 100px, rgba(255, 255, 255, 0) 300px, rgba(255, 255, 255, 0) 100%), url(../images/dist/pattern-bg.jpg)
+  background-size: 5%
+  // color: #fff
+  // background: url('../../images/del/2.jpg') no-repeat center top
+  // background-size: cover
+  
+.container
+  position: relative
+@media screen and (max-width: 1250px)
+  .container
+    width: 95%
+  .head .container
+    width: 100%
+
+.header
+  font-weight: 400
+  a
+    text-transform: uppercase
+  &-langs
+    display: flex
+    justify-content: flex-end
+  &-lang
+    font-weight: 300
+    padding: 24px 5px 8px 5px
+    transition: .3s
+    &:hover
+      color: #fff
+      background-color: $gold
+    &-current
+      color: #fff
+      background-color: $gold
+      &:hover
+        color: #fff
+  &-menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 56px
+  &-logo
+    img
+      width: 192px
+      height: 57px
+  &-nav
+    flex-basis: 510px
+    margin-left: 15px
+    margin-right: 15px
+    ul
+      display: flex
+      justify-content: space-between
+      li:hover a
+        color: $gold
+        text-shadow: 1px 1px 2px $goldTr
+    &-current a
+      color: $gold
+  &-links
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-basis: 220px
+  &-social
+    a
+      font-size: 1.143em
+    svg
+      border-radius: 50%
+      fill: $gold
+      transition: .4s
+    &:hover
+      svg
+        fill: #fff
+        box-shadow: 0 0 3px 1.1px $goldTr
+        background-color: $gold
+  &-phone
+  &-
+  &-
+  &-
+  &-
+
+.aside
+  &-toggle
+    cursor: pointer
+    width: 40px
+    height: 40px
+    border: 1px solid $grey
+    ul
+      height: 100%
+      padding: 10px 8px
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      li
+        width: 24px
+        height: 2px
+        background-color: $grey
+        transition: .4s
+        &:last-child
+          width: 16px
+    &:hover li:last-child
+      width: 24px
+  &-item
+
+.head
+  margin-bottom: 40px
+  &-wrapper
+    background-image: linear-gradient(0deg, rgba(196, 159, 96, 0.1), rgba(196, 159, 96, 0.1)), linear-gradient(90deg, rgba(196, 159, 96, 0.8) 0.65%, rgba(255, 255, 255, 0.8) 66.73%), url(A71T6987.jpg)
+  &-bg
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: -1
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &-title
+    display: flex
+    align-items: center
+    min-height: 320px
+    color: #fff
+    padding-left: $gutter
+    text-transform: uppercase
+    // padding-top: 100px
+    // padding-bottom: 100px
+@media screen and (max-width: 950px)
+  .header-links
+    display: none
+@media screen and (max-width: 750px)
+  .header
+    &-menu
+      justify-content: center
+    &-logo
+    &-nav
+      display: none
+
+.footer
+  padding-top: 16px
+  padding-bottom: 16px
+  background-color: #ebebeb
+  &-row
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    svg
+      margin-right: 10px
+    >p:first-child
+      max-width: 500px
+    >p:last-child
+      text-align: end
+      align-self: flex-end
+  &-address
+    display: flex
+    align-items: center
+    margin-bottom: 8px
+
+@media screen and (max-width: 650px)
+  .footer
+    &-row
+      flex-direction: column
+      >p:last-child
+        // text-align: start
+        align-self: start
+        margin-bottom: 20px
+    .container>div:last-child>p:last-child
+      align-self: flex-end
+      margin-bottom: 0px
+
+
+@keyframes showText
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+
+.accordion
+  .photost-wrapper
+    border: none
+  &-tabs
+    display: none
+  &-item
+    &:last-child
+    &__label
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      min-height: 64px
+      margin-top: 8px
+      text-transform: uppercase
+      border: 1px solid $gold
+      transition: padding .2s ease
+      position: relative
+      &:after
+      &::before
+        position: absolute
+        content: "\2304"
+        top: 10%
+        right: 5%
+        font-size: 26px
+        color: $black
+        transition: color .3s
+      &:hover
+        background: lighten($gold, 28)
+    &__container
+      height: 0
+      overflow: hidden
+      opacity: 0
+      transition: padding .2s ease, opacity .5s .15s ease
+  &-active
+    background: #fff
+    .accordion-item
+      &__label
+        background-color: $gold
+        color: #fff
+        cursor: inherit
+        &:hover
+        &::before
+          content: '\2303'
+          top: 30%
+          color: #fff
+        &:after
+          opacity: 0
+      &__container
+        border: 1px solid $gold
+        height: auto
+        opacity: 1
+
+@media screen and (min-width: 600px)
+  .accordion
+    &-tabs
+      display: flex
+    &-tab
+      min-height: 64px
+      text-transform: uppercase
+      background: #ffffff00
+      flex: 1
+      border: none
+      cursor: pointer
+      border: 1px solid $gold
+      transition: background .3s ease
+      &:hover
+      &:last-child
+      &.accordion-active
+        background: $gold
+        color: #fff
+    &-item
+      // height: 0
+      // overflow: hidden
+      // display: none
+      // border: none
+      background: #fff
+      // min-height: 260px
+      &__label, &__container
+        border: none
+        padding: 0
+        transition: inherit
+      &__label
+        display: none
+      &.accordion-active
+        display: block
+        .accordion-item__container
+          padding: 0
+    &-active
+      // border: 1px solid $gold
+
+@import "blocks/**/*"
+
+
+
+
+
+
+

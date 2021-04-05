@@ -1,0 +1,75 @@
+
+
+.main
+  &-gallery
+    display: flex
+    flex-wrap: wrap
+    color: #fff
+    margin-left: - $half_gutter
+    margin-right: - $half_gutter
+    &-item
+      position: relative
+      cursor: pointer
+      flex-basis: calc( 100% / 3 - #{$gutter} )
+      // flex-basis: calc( 100% / 3 - 32px )
+      // width: calc( 100% / 3 - #{$gutter} )
+      margin-left: $half_gutter
+      margin-right: $half_gutter
+      margin-bottom: $gutter
+      flex-shrink: 0
+      // box-shadow: 0px 0px 8px rgba(112, 112, 112, 0.7)
+      img, picture
+        width: 100%
+        height: auto
+        object-fit: cover
+      &:hover div
+        justify-content: center
+        align-items: center
+        padding-left: 0
+        padding-bottom: 0
+        opacity: 1
+        animation-name: showText
+        animation-duration: .4s
+        background: $goldTr
+        p
+          font-weight: 600
+          font-size: 18px
+          text-shadow: none
+          position: relative
+          &::before, &::after
+            content: ''
+            position: absolute
+            top: 42%
+            width: 20px
+            border-top: 1px solid #fff
+          &::before
+            left: -30px
+          &::after
+            right: -30px
+    &-text
+      position: absolute
+      top: 0
+      left: 0
+      display: flex
+      width: 100%
+      height: 100%
+      align-items: flex-end
+      padding-left: 10%
+      padding-bottom: 8%
+      text-transform: uppercase
+      p
+        font-family: Montserrat
+        font-weight: bold
+        font-size: 24px
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .55)
+
+@media screen and (max-width: 960px)
+  .main
+    &-gallery
+      &-item
+        flex-basis: calc( 100% / 2 - #{$gutter} )
+@media screen and (max-width: 480px)
+  .main
+    &-gallery
+      &-item
+        flex-basis: 100%

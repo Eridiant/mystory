@@ -1,0 +1,58 @@
+.photost
+  .container
+  &-wrapper
+    display: flex
+    padding: $gutter $half_gutter
+    background-color: #fff
+  &-item
+    flex-basis: calc( 100% / 2 - #{$gutter} )
+    margin-left: $half_gutter
+    margin-right: $half_gutter
+    &:first-child
+      display: flex
+      flex-direction: column
+  &-inner
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px dashed $grey_light
+  &-button
+    display: flex
+    justify-content: space-between
+    margin-top: auto
+    .btn
+      flex-basis: 254px
+      &:first-child
+        margin-right: 10px
+  &-swiper
+    position: relative
+    img
+      width: 100%
+      object-fit: cover
+  &-arrow
+  &-prev
+  &-next
+
+@media screen and (max-width: 850px)
+  .photost
+    .container
+    &-wrapper
+      flex-direction: column
+      border: 1px solid $gold
+      box-shadow: 0px 0px 8px rgba(112, 112, 112, 0.2)
+    &-item
+      flex-basis: 100%
+      margin-left: 0
+      margin-right: 0
+    &-button
+      max-width: 572px
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+@media screen and (max-width: 420px)
+  .photost
+    &-button
+      flex-direction: column
+      .btn
+        flex-basis: 56px
+        &:first-child
+          margin-right: 0px
