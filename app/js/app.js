@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   var gallery = new Swiper('.gallery-swiper', {
-    slidesPerView: 1,
+    slidesPerView: 1.3,
     spaceBetween: 16,
     pagination: {
       el: '.swiper-pagination',
@@ -72,6 +72,59 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     }
   });
+
+  var about = new Swiper('.about-swiper', {
+    slidesPerView: 1.3,
+    spaceBetween: 16,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+    }
+  });
+
+  var list = new Swiper('.about-list', {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    breakpoints: {
+      640: {
+        slidesPerView: 1.6,
+        spaceBetween: 20,
+      },
+      850: {
+        slidesPerView: 2,
+      },
+      1040: {
+        slidesPerView: 3,
+      },
+    }
+  });
+
+  // aside-menu aside-menu-active
+  // aside-mask aside-mask-active
+
+  document.querySelector('.aside-toggle').addEventListener('click', () => {
+    console.log('aside-toggle');
+    document.querySelector('.aside-menu').classList.add('aside-menu-active');
+    document.querySelector('.aside-mask').classList.add('aside-mask-active');
+
+    document.querySelector('.aside-mask').addEventListener('click', () => {
+      hideMenu();
+    })
+    document.querySelector('.aside-mob').addEventListener('click', () => {
+      hideMenu();
+    })
+  })
+
+  function hideMenu() {
+    document.querySelector('.aside-menu').classList.remove('aside-menu-active');
+    document.querySelector('.aside-mask').classList.remove('aside-mask-active');
+  }
 
   const labels = document.querySelectorAll(".accordion-item__label");
   const tabs = document.querySelectorAll(".accordion-tab");
@@ -114,5 +167,31 @@ document.addEventListener('DOMContentLoaded', () => {
   tabs.forEach(function(tab) {
     tab.addEventListener("click", toggleShow);
   });
+
+  const lbs = document.querySelectorAll(".accord-item__label");
+
+  lbs.forEach(function(lb) {
+    lb.addEventListener("click", tglShow);
+  });
+
+  function tglShow() {
+    const target = this;
+    const item = target.parentElement;
+    const group = item.dataset.acvtabGroup;
+    const id = item.dataset.acvtabId;
+
+    lbs.forEach(function(label) {
+      const tabItem = label.parentElement;
+
+      if (tabItem.dataset.acvtabGroup === group) {
+        if (tabItem.dataset.acvtabId === id && !(tabItem.classList.contains("accord-active"))) {
+          tabItem.classList.add("accord-active");
+        } else {
+          tabItem.classList.remove("accord-active");
+        }
+      }
+    });
+  }
+
 
 })

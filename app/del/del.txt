@@ -1,0 +1,112 @@
+
+<div class="photost-inner">
+<p>цена за 1 час</p>
+<p>1 000 ₽</p>
+</div>
+<div class="photost-inner">
+<p>цена от 3-х часов</p>
+<p>2 000 ₽</p>
+</div>
+<div class="photost-inner">
+<p>цена от 5-ти часов</p>
+<p>1 800 ₽</p>
+</div>
+
+<div class="photost-inner">
+<p>1 час</p>
+<p>190 ₽</p>
+</div>
+<div class="photost-inner">
+<p>1 день</p>
+<p>1 500 ₽</p>
+</div>
+
+
+
+
+<nav id="site-navigation" class="main-navigation">
+          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mystory' ); ?></button>
+          <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'menu-1',
+              'menu_id'        => 'primary-menu',
+            )
+          );
+          ?>
+        </nav>
+
+/* Group 1 */
+
+position: absolute;
+width: 540px;
+height: 136px;
+left: 212px;
+top: 1248px;
+
+
+
+/* Мы будем рады видеть вас в нашей команде, если Вы имеете: • Опыт работы от 1-2 лет; • Знание современных техник; • Доброжелательность, сервисное поведение, грамотная речь; */
+
+position: absolute;
+width: 540px;
+height: 136px;
+left: 212px;
+top: 1248px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0.02em;
+
+/* text headlines/black */
+color: #414141;
+
+	add_image_size( 'index-bg2', 848, 848, true ); // 960
+	add_image_size( 'index-bg', 424, 424, true ); // 960
+	add_image_size( 'index-bgs2', 848, 608, true ); // 960
+	add_image_size( 'index-bgs', 440, 304, true ); // 960
+
+
+
+<style> .son_wrapper { width: 150px; height: 150px; position: fixed; bottom: 0;right: 0; border:0px solid #1c1c1c; z-index:9999; } .son_wrapper a { text-decoration:none; } .son_circle { width:100px; height:100px; border-radius:250px; font-size:14px; font-family: Play, sans-serif !important; color:#fff; line-height:25px; text-align:center; background:#1c1c1c; } @keyframes son_outercircle { 0% { transform: scale(1,1) opacity: 1; } 80% { opacity: 0.8; } 100% { transform: scale(2,2); opacity: 0; } } .son_outercircle { z-index: -1000; position: absolute; width: 60px; height: 60px; border: 5px solid #1c1c1c; border-radius: 50%; animation: son_outercircle 2s infinite linear; margin-top: 15px ; margin-left: 15px ; } </style>
+<div class="son_wrapper">
+<div class="son_outercircle"></div>
+<a href="#" onClick="showSonlineWidget(sonlineWidgetOptions);"> <div class="son_circle"><br>Онлайн<br/> запись</div></a>
+</div>
+<script>var sonlineWidgetOptions = {placeid: 998747961}</script>
+<div id="widgetSonline"/>
+<script type="text/javascript" src="https://sonline.su/js/widget3/widget3.js"></script>
+
+
+
+Бронирование 
+1800 р на 1 час 
+1500/час в будни от 3х часов
+выходные 2000 р 1 час
+1800/час от 3х часов
+
+
+
+
+-
+-
+-
+-
+-
+-
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+.rules
+  h2
+    color: $gold
+  h3
+    font-weight: 500
+    font-size: 16px
+  .accord-item
+    &__container
+      position: relative
+      max-height: 180px
+      opacity: 1
+      &::after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 1px, rgba(255, 255, 255, 0) 50px)
+    &__label
+      margin-left: 0px
+      margin-right: 0px
+  .accord-active
+    .accord-item__container
+      max-height: 800px
+      &::after
+        background: none
+  &-grid
+    // margin-left: - $half_gutter
+    // margin-right: - $half_gutter
+    // margin-bottom: $gutter
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: auto
+    grid-gap: $gutter
+    align-items: start
+  &-item
+    padding: $gutter
+    box-shadow: 0px 0px 8px rgba(112, 112, 112, 0.2)
+  &-
+  &-
+  &-
+  &-
+
+@media screen and (max-width: 1050px)
+  .rules
+    &-grid
+      grid-template-columns: 1fr 1fr
+    &-item
+      padding: 24px
+@media screen and (max-width: 700px)
+  .rules
+    &-grid
+      grid-template-columns: 1fr
+    &-item
+      padding: $half_gutter

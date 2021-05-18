@@ -22,30 +22,31 @@
         width: 100%
         height: auto
         object-fit: cover
-      &:hover div
-        justify-content: center
-        align-items: center
-        padding-left: 0
-        padding-bottom: 0
-        opacity: 1
-        animation-name: showText
-        animation-duration: .4s
-        background: $goldTr
-        p
-          font-weight: 600
-          font-size: 18px
-          text-shadow: none
-          position: relative
-          &::before, &::after
-            content: ''
-            position: absolute
-            top: 42%
-            width: 20px
-            border-top: 1px solid #fff
-          &::before
-            left: -30px
-          &::after
-            right: -30px
+      p
+        padding: 10px 24px
+        transition: .3s
+      &:hover
+        .main-gallery-bg
+          opacity: 1
+          visibility: visible
+          animation-name: showText
+    &-bg
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+      width: 100%
+      height: 100%
+      visibility: hidden
+      transition: .4s
+      animation-duration: .4s
+      // animation-name: showText
+      // animation-duration: .4s
+      // background: $goldTr
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
     &-text
       position: absolute
       top: 0
@@ -54,15 +55,34 @@
       width: 100%
       height: 100%
       align-items: flex-end
-      padding-left: 10%
-      padding-bottom: 8%
+      padding-left: 0%
+      padding-bottom: 6%
       text-transform: uppercase
+      z-index: 1
       p
         font-family: Montserrat
         font-weight: bold
         font-size: 24px
         text-shadow: 2px 2px 4px rgba(0, 0, 0, .55)
-
+@media screen and (min-width: 960px)
+  .main
+    &-gallery
+      &-item
+        p
+          margin-left: -10px
+        &:hover
+          p
+            background-color: $gold
+            transition-delay: .3s
+          div
+          .main-gallery-bg
+            opacity: 1
+            visibility: visible
+            transform: scale(1.05, 1.05)
+            animation-name: showText
+      &-bg
+        transition: .4s
+        animation-duration: .4s
 @media screen and (max-width: 960px)
   .main
     &-gallery
@@ -71,5 +91,9 @@
 @media screen and (max-width: 480px)
   .main
     &-gallery
+      margin-left: 0
+      margin-right: 0
       &-item
         flex-basis: 100%
+        margin-left: 0
+        margin-right: 0

@@ -1,5 +1,8 @@
 .photost
   .container
+  .photost-item p
+    font-size: 1.143em
+    font-size: 1em
   &-wrapper
     display: flex
     padding: $gutter $half_gutter
@@ -8,13 +11,22 @@
     flex-basis: calc( 100% / 2 - #{$gutter} )
     margin-left: $half_gutter
     margin-right: $half_gutter
+    margin-bottom: 7px
     &:first-child
       display: flex
       flex-direction: column
+    h3
+      margin-bottom: 32px
+    ul
+      margin-bottom: 10px
   &-inner
     display: flex
     justify-content: space-between
+    text-transform: uppercase
     border-bottom: 1px dashed $grey_light
+    margin-bottom: 20px
+    p
+      font-size: 1.143em
   &-button
     display: flex
     justify-content: space-between
@@ -46,8 +58,10 @@
     &-button
       max-width: 572px
       width: 100%
+      margin-top: 24px
       margin-left: auto
       margin-right: auto
+      margin-bottom: 24px
 @media screen and (max-width: 420px)
   .photost
     &-button

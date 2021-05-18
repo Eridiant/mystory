@@ -1,12 +1,60 @@
+
+
 .gallery
-  .swiper-slide img
-    transition: transform .3s
-  .swiper-container
-    padding-top: 10px
-    padding-bottom: 10px
-  .swiper-slide-next img
-    transform: scale(1.1, 1.1)
-    width: 100%
+  &-wrapper
+    padding: 40px 32px 0px
+    margin-bottom: 40px
+    background-color: #fff
+  &-nav
+    display: flex
+    justify-content: center
+    margin-top: 40px
+  &-inner
+    position: relative
+    // display: inline-block
+    .swiper-pagination
+      position: static
+      display: flex
+  &-prev
+    position: absolute
+    left: -100px
+    top: -17px
+    height: 40px
+    width: 51px
+    cursor: pointer
+  &-next
+    position: absolute
+    right: -100px
+    top: -17px
+    height: 40px
+    width: 51px
+    cursor: pointer
+  .swiper
+    &-container
+      padding-bottom: 40px
+    &-pagination
+      bottom: 0px
+      &-bullet
+        background: #00000000
+        border: 1px solid $black
+        margin: 0 4px
+        &-active
+          background: $grey
+    &-slide img
+      width: 100%
+    
+
+
+
+@media screen and (min-width: 1280px)
+  .gallery
+    .swiper-slide img
+      transition: transform .3s
+    .swiper-container
+      padding-top: 10px
+    .swiper-slide-next img
+      transform: scale(1.1, 1.1)
+      width: 100%
     
 
 

@@ -1,0 +1,134 @@
+.accord-item.accord-active
+  .about-label
+    background-color: #fff
+    span
+      display: block
+    &::before
+      color: $grey
+.about
+  .about-wrapper p
+    font-size: 1.143em
+  .accord-item.accord-active .accord-item__container
+    max-height: 550px
+  br
+    margin-bottom: 10px
+  .beauty-item p
+    margin-bottom: 6px
+  &-wrapper
+    display: flex
+    align-items: flex-start
+    margin-left: - $half_gutter
+    margin-right: - $half_gutter
+    margin-bottom: $gutter
+  &-item
+    display: grid
+    grid-template-columns: 1fr 1fr
+    // grid-template-rows: minmax(192px, 1fr) minmax(112px, 0.5fr) minmax(192px, 1fr)
+    // grid-template-rows: 192px 112px 192px
+    grid-template-rows: 1.2fr .7fr 1.2fr
+    grid-gap: $gutter
+  &-img
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &:nth-child(1)
+      grid-column: 1 / 2
+      grid-row: 1 / 3
+    &:nth-child(2)
+      grid-column: 1 / 2
+      grid-row: 3 / 4
+    &:nth-child(3)
+      grid-column: 2 / 3
+      grid-row: 1 / 2
+    &:nth-child(4)
+      grid-column: 2 / 3
+      grid-row: 2 / 4
+  &-label
+    text-transform: capitalize
+    justify-content: flex-end
+    background-color: #fff
+    padding-right: 60px
+    span
+      display: none
+      color: $grey
+    &:hover
+      background-color: #fff
+  &-swiper
+    display: none
+    padding-left: $half_gutter
+    padding-right: $half_gutter
+    margin-bottom: 32px
+    img
+      width: 100%
+      object-fit: cover
+  &-list
+    .swiper-container
+    .swiper-slide
+    &-wrapper
+    &-inner
+      position: relative
+      display: flex
+      flex-direction: column
+      min-height: 176px
+      text-align: center
+      padding: $gutter
+      background-color: #fff
+      box-shadow: 0px 0px 8px rgba(112, 112, 112, 0.3)
+      border: 1px solid rgba(112, 112, 112, 0.2)
+      margin-bottom: $gutter
+      h3
+        z-index: 1
+      p:nth-child(2)
+        z-index: 1
+        margin-top: auto
+        margin-bottom: auto
+      p:last-child
+        position: absolute
+        top: 0
+        left: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
+        font-weight: 500
+        font-size: 110px
+        color: $gold
+        opacity: .15
+  &-
+  &-
+  &-
+  &-
+
+
+
+@media screen and (max-width: 850px)
+  .about
+    .container
+      border: 1px solid $gold
+    .beauty-item-text
+      box-shadow: none
+    .about-wrapper
+      margin-left: 0
+      margin-right: 0
+    .photost-item
+      // margin-left: $half_gutter
+      // margin-right: $half_gutter
+    &-item
+      display: none
+    &-list
+      padding-left: $half_gutter
+      padding-right: $half_gutter
+    &-wrapper
+      flex-direction: column
+    &-swiper
+      display: block
+
+@media screen and (max-width: 550px)
+  .accord-item__label
+    margin-left: 0
+    margin-right: 0
+
+
+

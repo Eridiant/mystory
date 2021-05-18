@@ -1,0 +1,36 @@
+.value
+  &-button
+    display: flex
+    margin-top: auto
+    justify-content: center
+    .btn
+      width: 100%
+      max-width: 572px
+      margin-bottom: 24px
+  &-buttons
+    display: flex
+    justify-content: space-between
+    .btn
+      flex-basis: 254px
+      &:first-child
+        margin-right: 10px
+
+@media screen and (max-width: 850px)
+  .value
+    &-button
+      margin-top: 24px
+    &-buttons
+      max-width: 572px
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 24px
+
+@media screen and (max-width: 420px)
+  .value
+    &-buttons
+      flex-direction: column
+      .btn
+        flex-basis: 56px
+        &:first-child
+          margin-right: 0px
